@@ -1,7 +1,7 @@
 ## Topic Modeling The Tim Ferriss Show 
 
 ### Summary:
-=
+
 In this project, I scraped transcripts of one of my favorite podcasts, the Tim 
 Ferriss Show.  
 
