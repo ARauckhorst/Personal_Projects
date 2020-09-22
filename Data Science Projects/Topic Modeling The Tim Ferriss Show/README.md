@@ -1,7 +1,7 @@
 ## Topic Modeling The Tim Ferriss Show 
----
+
 ### Summary:
----
+=
 In this project, I scraped transcripts of one of my favorite podcasts, the Tim 
 Ferriss Show.  
 
@@ -18,12 +18,12 @@ episode recommender based on collaborative filtering and using cosine similarity
 to determine like episodes.
 
 ### Data
----
+
 Data gathered was from the website tim.blog where episode transcripts published
 by Tim Ferriss are housed.
 
 ### Files
----
+
 - web_scraping.py - Scrapes episode text
 - data_cleaning.py - Cleans and processes text
 - model.py - Contains LDA model and simple recommender
