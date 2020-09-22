@@ -24,3 +24,10 @@ Data gathered was from the the Twitch public API.
 - data.py - Gathers user/channel interaction data.
 - features.py - Gathers channel feature data.
 - model.py - Contains RankFM model for collaborative filtering.
+
+### Contact Me
+
+| Contact Method |  |
+| --- | --- |
+| Email | adamr@hey.com |
+| LinkedIn | https://www.linkedin.com/in/adamrauckhorst/ |
