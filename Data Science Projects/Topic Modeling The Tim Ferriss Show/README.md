@@ -5,13 +5,13 @@
 In this project, I scraped transcripts of one of my favorite podcasts, the Tim 
 Ferriss Show.  
 
-I then used topic modeling via LDA (Latent Dirichlet Allocation) to identify
+I then used topic modeling via LDA (Latent Dirichlet Allocation), a natural language processing technique, to identify
 high level themes for the podcast. The themes I discovered were:
 
-- Business/Investing/Entrepreneurship
-- Physical Training
-- Arts/Creativity
-- Mental Health
+- **Business/Investing/Entrepreneurship**
+- **Physical Training**
+- **Arts/Creativity**
+- **Mental Health**
 
 I then used the topic weighting scores for these topics to build a simple 
 episode recommender based on collaborative filtering and using cosine similarity
