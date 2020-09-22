@@ -14,7 +14,7 @@ This repository holds all of my personal projects. Currently they're binned into
     
 3. Tableau Vizualizations (Coming Soon!)
 
-Each category has their own variety of projects and should be accompanied by some form of documentation. 
+Each project has it's own documentation and high level summary if you're just interested in a quick look.
 
 ## Background
 
