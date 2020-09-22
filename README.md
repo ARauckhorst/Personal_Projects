@@ -8,11 +8,9 @@ This repository holds all of my personal projects. Currently they're binned into
     - [Regression]()
     - [Classification]()
     - [Natural Language Processing (NLP)]()
-   
-2. [Software Engineering Projects]()
-    - [APIs]()
+    - [Collaborative Filtering Recommender]()
     
-3. Tableau Vizualizations (Coming Soon!)
+2. Tableau Vizualizations (Coming Soon!)
 
 Each project has it's own documentation and high level summary if you're just interested in a quick look.
 
