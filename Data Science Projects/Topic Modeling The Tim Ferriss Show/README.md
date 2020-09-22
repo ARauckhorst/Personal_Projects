@@ -27,3 +27,10 @@ by Tim Ferriss are housed.
 - web_scraping.py - Scrapes episode text
 - data_cleaning.py - Cleans and processes text
 - model.py - Contains LDA model and simple recommender
+
+### Contact Me
+
+| Contact Method |  |
+| --- | --- |
+| Email | adamr@hey.com |
+| LinkedIn | https://www.linkedin.com/in/adamrauckhorst/ |
