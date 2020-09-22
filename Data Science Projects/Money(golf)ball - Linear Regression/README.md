@@ -18,3 +18,10 @@ This project includes four files:
 - **pga_eda_and_modeling.ipynb**: Data investigation and modeling.
 - **Project 2 - Money(golf)ball.pdf**: Presentation slides.
 
+### Contact Me
+
+| Contact Method |  |
+| --- | --- |
+| Email | adamr@hey.com |
+| LinkedIn | https://www.linkedin.com/in/adamrauckhorst/ |
+
