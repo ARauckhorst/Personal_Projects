@@ -16,7 +16,7 @@ Each project has it's own documentation and high level summary if you're just in
 
 ## Background
 
-Hi there!
+Hi there! :smiley:
 
 My name is Adam Rauckhorst - thank you for taking a look at my project portfolio! A little bit about me. I did my undergraduate at The University of Texas at Austin where I majored in Economics. My career has taken me from leading large scale SaaS implementations for the largest US telecom companies to managing a small, remote team revolutionizing (and removing the stress of) how US citizens living abroad stay complient on their taxes. The one constant throughout my career is a love of data and using it to make the best informed business decisions, as well as using it to bridge the gap between technical and non-technical folks.
 
