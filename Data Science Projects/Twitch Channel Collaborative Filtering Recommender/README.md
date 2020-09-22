@@ -1,6 +1,6 @@
 ## Collaborative Filtering for Twitch Channel Recommendations
 
-### Summary:
+### Summary
 
 In this project, I built a collaborative filtering recommender using data gathered 
 from the Twitch public API.
