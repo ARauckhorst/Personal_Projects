@@ -4,7 +4,7 @@
 
 This repository holds all of my personal projects. Currently they're binned into these different categories:
 
-1. [Data Science Projects]()
+1. [Data Science Projects](https://github.com/ARauckhorst/Personal_Projects/tree/master/Data%20Science%20Projects)
     - [Regression]()
     - [Classification]()
     - [Natural Language Processing (NLP)]()
