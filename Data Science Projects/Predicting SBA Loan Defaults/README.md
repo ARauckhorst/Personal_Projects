@@ -25,3 +25,10 @@ https://www.kaggle.com/mirbektoktogaraev/should-this-loan-be-approved-or-denied
 - loan_mapping - Mapping variables for project-3-streamlit.py
 - project-3-streamlit.py - A Streamlit application utilizing the final
 production model
+
+### Contact Me
+
+| Contact Method |  |
+| --- | --- |
+| Email | adamr@hey.com |
+| LinkedIn | https://www.linkedin.com/in/adamrauckhorst/ |
