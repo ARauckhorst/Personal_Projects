@@ -1,8 +1,15 @@
-### Metis Project 2 - Predicting Golfer Earnings using Linear Regression
+### Money(golf)ball: Predicting PGA Tour Pro Earnings with Linear Regression
 
-This project attempted to using golfer statistics to predict end-of-year 
-earnings for PGA tour professionals. The final model had an r-squared
-score of 0.71 and a mean absolute error around $600,000. 
+## Summary
+
+In this project, I wanted to see if I could predict the earnings of a PGA Tour professional based on his playing stats using Linear Regression. The game of golf is so variable, a game where inches can equate to thousands or even hundreds of thousands of dollars in earnings, so this was an interesting problem to tackle.
+My final model had an R-Squared score of 0.71 and a mean absolute error around $600,000.
+
+## Data
+
+Data was scraped from the [PGA Tour website](https://www.pgatour.com/stats.html) using BeautifulSoup.
+
+## Files
 
 This project includes four files:
 
