@@ -20,7 +20,7 @@ Each category has their own variety of projects and should be accompanied by som
 
 Hi there!
 
-My name is Adam Rauckhorst - thank you for taking a look at my project portfolio! A little bit about me. I did my undergraduate at The University of Texas at Austin where I majored in Economics. My career has taken me from leading large scale SaaS implementations for the big 4 telecom companies to managing a small, remote team revolutionizing (and removing the stress of) how US citizens living abroad stay complient on their taxes. The one constant throughout my career is a love of data and using it to make the best informed business decisions, as well as using it to bridge the gap between technical and non-technical folks.
+My name is Adam Rauckhorst - thank you for taking a look at my project portfolio! A little bit about me. I did my undergraduate at The University of Texas at Austin where I majored in Economics. My career has taken me from leading large scale SaaS implementations for the largest US telecom companies to managing a small, remote team revolutionizing (and removing the stress of) how US citizens living abroad stay complient on their taxes. The one constant throughout my career is a love of data and using it to make the best informed business decisions, as well as using it to bridge the gap between technical and non-technical folks.
 
 Now I focus on programming with a special interest in Machine Learning and Data Science, which I've discovered to be my passion!
 
