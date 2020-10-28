@@ -26,13 +26,13 @@ import pickle
 
 # Global API credentials
 
-URL = URL
-CLIENT_ID = CLIENT_ID
-AUTH = AUTH_TOKEN
+URL = 'https://api.twitch.tv/helix/users/follows?'
+CLIENT_ID = 'sumh6uh68shp5r0hfhxs97h73vhewd'
+AUTH = 'Bearer mp1mjvscmpc5cy49cvy0ltj0uq13w1'
 INITIAL_USER = 'kindafunnygames'
-HEAD = {'Client-ID': CLIENT_ID,
-        'Authorization': AUTH
-        }
+HEAD = { 'Client-ID': CLIENT_ID,
+         'Authorization': AUTH
+    }
 
 # Global stats variables for print_stats() function
 
@@ -128,7 +128,6 @@ def get_user_follows(user_id):
     pag_key, total = fetch_page(user_id, follows)
     num_pages = total // 100 if total % 100 != 0 else (total // 100) - 1
     for _ in range(0, num_pages):
-        yield num_pages
         pag_key, _ = fetch_page(user_id, follows, pag_key=pag_key)
 
     yield follows
@@ -169,18 +168,22 @@ def fetch_page(user_id, user_pairs, param='from_id={}', pag_key=None):
 
         for item in r.json()['data']:
             user_pairs.append((item['from_id'], item['to_id']))
-        pag_key = r.json()['pagination']['cursor']
         total = r.json()['total']
+        if total > 100 and len(user_pairs) < total:
+            pag_key = r.json()['pagination']['cursor']
+        else:
+            pag_key = None
 
     except Exception as e:
         LAST_TIME_CALLED = time.time()
         NOT_PROCESSED.append(user_id)
         print('Unable to get followers for user_id={}, pag_key={}, exception={}'.format(user_id, pag_key, str(e)))
         pag_key, total = None, 0
+
     return pag_key, total
 
 
-def level_order_traversal(users, depth=1):
+def user_relationships(users, depth=1):
     """Returns a list of user relationships.
 
     This function will output a list of users and which users they follow on Twitch.
@@ -229,10 +232,10 @@ def level_order_traversal(users, depth=1):
     candidates, next_candidates, seen = set(), set(), set()
     start_collecting_stats(print_stats, print_dots)
     next_candidates = set(*users)
-    consumers = [Consumer(i, []) for i in range(13)]
+    consumers = [Consumer(i, []) for i in range(10)]
     consumer_cv = threading.Condition()
 
-    while next_candidates and level < depth:
+    while next_candidates and level <= depth:
         if level == 0:
             start_threads(consumers, consumer_cv, next_candidates, seen)
         level += 1
@@ -244,6 +247,13 @@ def level_order_traversal(users, depth=1):
             next_candidates.update((item[1], None) for item in consumer.follows)
             consumer.follows = []
 
+        # Save processed and next candidates periodically
+        if len(user_item) % 2500 == 0:
+            with open('processed', 'wb') as processed:
+                pickle.dump(processed)
+            with open('next_candidates', 'wb') as next_candidates:
+                pickle.dump(next_candidates)
+
         NUM_REMAINING_THREADS = len(consumers) * 1.0
         consumer_cv.acquire()
         consumer_cv.notifyAll()
@@ -254,7 +264,7 @@ def level_order_traversal(users, depth=1):
 
 
 def start_collecting_stats(print_stats, print_dots):
-    """Starts threads to print stats and dots while level_order_traversal() function is executing.
+    """Starts threads to print stats and dots while user_relationships() function is executing.
     """
     threading.Thread(target=print_dots).start()
     threading.Thread(target=print_stats).start()
@@ -264,7 +274,7 @@ def consumer_thread(consumer_cv, queue, consumer, seen):
     """The job of each consumer thread.
 
     This function represents the job that each consumer will continuously perform
-    in the level_order_traversal() function. The threads first check if there is
+    in the user_relationships() function. The threads first check if there is
     an available job. Then, the thread takes the next user in the queue to process.
     Finally, the thread processes the user and stores the information to combine
     with the other threads after they are finished.
@@ -301,7 +311,7 @@ def consumer_thread(consumer_cv, queue, consumer, seen):
 def start_threads(consumers, consumer_cv, queue, seen):
     """Starts all of the thread workers.
 
-    This function starts all of the thread workers from the level_order_traversal() function
+    This function starts all of the thread workers from the user_relationships() function
     and has them execute the consumer_thread() function.
 
     Args:
@@ -329,8 +339,9 @@ def main():
     kf_followers = get_followers_of(initial_id)
 
     # Return all of the channels followed by followers of Kinda Funny Games
+    result = user_relationships(kf_followers, depth=1)
 
-    result = level_order_traversal(kf_followers, depth=1)
+    print(result)
 
     print('DONE!')
     with open('user_item_interactions.pkl', 'wb') as f:
@@ -343,3 +354,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+
