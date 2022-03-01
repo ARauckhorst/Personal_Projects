@@ -1,6 +1,6 @@
 # Adam Rauckhorst - Projects Portfolio
 
-This repository holds all of my personal projects. Currently they're binned into these different categories:
+This repository holds some of my personal projects. Currently they're binned into these different categories:
 
 - [Data Science Projects](https://github.com/ARauckhorst/Personal_Projects/tree/master/Data%20Science%20Projects)
     - [Linear Regression](https://github.com/ARauckhorst/Personal_Projects/tree/master/Data%20Science%20Projects/Money(golf)ball%20-%20Linear%20Regression)
