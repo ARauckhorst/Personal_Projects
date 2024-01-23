@@ -13,5 +13,5 @@ This repository holds some of my personal projects. Currently they're binned int
 
 | Contact Method |  |
 | --- | --- |
-| Email | adamr@hey.com |
+| Email | adamrauckhorst1@gmail.com |
 | LinkedIn | https://www.linkedin.com/in/adamrauckhorst/ |
